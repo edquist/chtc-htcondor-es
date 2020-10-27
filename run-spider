@@ -1,7 +1,4 @@
 #!/bin/bash
 
-/htcondor-es/htcondor_es/spider.py --config=/htcondor-es/examples/config.ini
-
-# OR setup.py install; and then:
-#spider --config=/htcondor-es/examples/config.ini
+spider --config=/htcondor-es/config.ini
 

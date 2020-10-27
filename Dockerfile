@@ -16,7 +16,9 @@ RUN chmod +x /usr/bin/kubectl
 
 # copy spider codebase
 COPY . /htcondor-es
+WORKDIR /htcondor-es
+RUN python setup.py build
+RUN python setup.py install
 RUN useradd --uid 1414 -ms /bin/bash spider &&\
 chown -R spider /htcondor-es
 USER spider
-WORKDIR /htcondor-es
